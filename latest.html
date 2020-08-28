@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="mid">Add Revenue</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg cn" data-toggle="modal" data-target="#myModal">Open Revenue Window</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Revenue Group</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="title">Revenue Group Title</label>
+              <input type="text" id="title" class="form-control">
+              <label id="line" for="choose">if <select class="form-control" name="choose" id="choose">
+                <option value="All">ALL</option>
+              </select>
+              of the conditions below are met
+            </label>
+            </div>
+
+            <div id="fun" class="shade" class="form-group control-group">
+              <label>Rule 1</label>
+              <select class="form-control short">
+                <option value="aff_sub">aff_sub</option>
+              </select>
+              <select class="form-control short">
+                <option value="is">is</option>
+              </select>
+
+              <input type="text" placeholder="insert parameter" class="form-control">
+              <button id="plus" class="btn btn-success" type="button" name="button">Add</button>
+            </div>
+
+            <div class="form-group">
+              <label for="num">then revenue is</label>
+              <input type="number" id="num" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-warning" type="button" name="button">Confirm</button>
+              <button class="btn btn-secondary" type="button" name="button">Cancel</button>
+            </div>
+
+            <div class="copy hide">
+              <div id="fun" class="form-group control-group">
+                <label>Rule <span id="change">1</span></label>
+                <select class="form-control short">
+                  <option value="aff_sub">aff_sub</option>
+                </select>
+                <select class="form-control short">
+                  <option value="is">is</option>
+                </select>
+                <input type="text" placeholder="insert parameter" class="form-control">
+                <button id="minus" class="btn btn-danger remove" type="button" name="button">Remove</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
